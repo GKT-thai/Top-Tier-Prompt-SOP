@@ -1,0 +1,35 @@
+# Standard .gitignore file for various common cases
+
+# IDE files
+*.idea/
+*.vscode/
+*.session
+*.swp
+*~
+
+# Environment variable files
+.env
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python and testing files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.coverage
+*.pytest_cache/
