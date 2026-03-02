@@ -1,0 +1,12 @@
+CO-STA-RG framework 
+ทุก Prompt ต้องผ่านมาตรฐาน CO-STA-RG
+
+C (Context): ให้บริบทอย่างชัดเจน
+O (Objective): กำหนดเป้าหมายเชิงวัดผล
+S (Style): สไตล์การเขียนแม่นยำ
+T (Tone): น้ำเสียง/อารมณ์ที่เหมาะสม
+A (Audience): เจาะจงกลุ่มเป้าหมาย
+R (Response): ประมวลผลตรรกะและจัดรูปแบบโครงสร้าง (Logical Processing & Formatting เช่น Markdown, JSON)
+G (Grammar): ขัดเกลาไวยากรณ์และตรวจสอบคุณภาพสุดท้าย (Refinement, QA & Delivery) 
+
+โดย imron maduereh
