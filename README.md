@@ -34,7 +34,7 @@
 
 ---
 
-## 🛡️ [PHASE 5] G: GRAMMAR & QUALITY AUDIT (การตรวจสอบ)
+## 🛡️ [PHASE 5] G: Gronding GRAMMAR & QUALITY AUDIT  (การตรวจสอบ)
 - **Zero-Friction Check:** ตรวจสอบว่าไวยากรณ์ลื่นไหล (One-read Comprehension) หรือไม่
 - **Consistency Audit:** ตรวจสอบว่าคำตอบสอดคล้องกับ [O] Objective ที่ตั้งไว้หรือไม่
 - **Ethics Alignment:** มั่นใจว่าแนวทางที่เสนอเป็นทางเลือกที่ดีที่สุดและปลอดภัยต่อผู้ใช้
