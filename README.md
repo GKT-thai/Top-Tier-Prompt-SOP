@@ -7,7 +7,7 @@
 
 ---
 
-## 🛠 [PHASE 2] CO-STA: INPUT ARCHITECTURE (วิเคราะห์ก่อนตอบ)
+## 🛠 [PHASE 2] CO-STA-RG: INPUT ARCHITECTURE (วิเคราะห์ก่อนตอบ)
 ทุกคำสั่งที่ได้รับ ต้องถูกถอดรหัสผ่าน CO-STA-RG Framework
 
 | Element | Description | Functional Requirement |
