@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                    CO-STA-RG UNIVERSAL PROMPT TEMPLATE                        ║
+║              เวอร์ชัน 1.0 | สำหรับ GKT-thai Solution Team                      ║
+║                                                                               ║
+║ หลักการ: Context → Objective → State → Task → Action → Result → Ground        ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+-->
+
+<PromptTemplate>
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <!-- 1. METADATA - ข้อมูลประจำตัว Prompt -->
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <Metadata>
+        <Title>[ชื่อ Prompt ที่ชัดเจนสั้นๆ]</Title>
+        <Creator>[ชื่อผู้สร้าง]</Creator>
+        <Version>[เวอร์ชัน เช่น 1.0]</Version>
+        <CreatedDate>[วันที่สร้าง YYYY-MM-DD]</CreatedDate>
+        <LastModified>[วันที่แก้ไขล่าสุด YYYY-MM-DD]</LastModified>
+        <Tags>[คำค้นหา, แยกด้วย comma]</Tags>
+        <Category>[เช่น: Analysis, Generation, Transformation, Decision-Making]</Category>
+        <Complexity>[Basic / Intermediate / Advanced]</Complexity>
+    </Metadata>
+
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <!-- 2. CONTEXT (C) - บริบท ฉากหลัง สถานการณ์ -->
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <Context>
+        <!-- 2.1 สถานการณ์ที่ต้องการแก้ไข -->
+        <Situation>
+            <Problem>
+                [ปัญหาที่เกิดขึ้น หรือสถานการณ์ที่ต้องจัดการ]
+                [เช่น: "การเขียน XML Prompt ยังไม่มีโครงสร้างแบบ universal"]
+            </Problem>
+            <Background>
+                [ข้อมูลเบื้องหลัง ประวัติศาสตร์ หรือบริบท]
+                [เช่น: "GKT-thai มีความต้องการ standardized prompt framework"]
+            </Background>
+        </Situation>
+
+        <!-- 2.2 ผู้เกี่ยวข้อง (Stakeholders) -->
+        <Stakeholders>
+            <Audience>[ผู้ใช้ Prompt นี้ เช่น: GKT-thai Team, Prompt Engineers]</Audience>
+            <ExpertiseLevel>[Beginner / Intermediate / Expert]</ExpertiseLevel>
+            <KnowledgeAssumptions>
+                [สิ่งที่ถือว่ารู้แล้ว เช่น: "รู้พื้นฐาน XML, ความรู้เกี่ยวกับ BDL"]
+            </KnowledgeAssumptions>
+        </Stakeholders>
+
+        <!-- 2.3 ข้อจำกัด (Constraints) ของบริบท -->
+        <EnvironmentalConstraints>
+            <Item>
+                [ข้อจำกัดเวลา/ทรัพยากร/เทคนิค เช่น: "ต้องทำให้สำเร็จใน 30 นาที"]
+            </Item>
+            <Item>
+                [เช่น: "ใช้ได้เฉพาะกับ Claude API"]
+            </Item>
+        </EnvironmentalConstraints>
+
+        <!-- 2.4 บริบทสถาบัน (Organizational Context) -->
+        <OrganizationalContext>
+            <Mission>[เป้าหมายองค์กร หากเกี่ยวข้อง]</Mission>
+            <Standards>[มาตรฐานที่ต้องปฏิบัติตาม เช่น: "GKT-thai Standards v2.0"]</Standards>
+            <RelatedFrameworks>[Framework ที่เกี่ยวข้อง เช่น: "BDL Apex Prime, GTK-SYS-18.0"]</RelatedFrameworks>
+        </OrganizationalContext>
+    </Context>
+
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <!-- 3. OBJECTIVE (O) - เป้าหมาย สิ่งที่ต้องการให้ AI ทำ -->
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <Objective>
+        <!-- 3.1 เป้าหมายหลัก (Primary Goal) -->
+        <PrimaryGoal>
+            [เป้าหมายสุดท้ายที่ชัดเจนที่สุด]
+            [เช่น: "สร้างคู่มือใช้งาน CO-STA-RG ที่สามารถนำไปปฏิบัติได้"]
+        </PrimaryGoal>
+
+        <!-- 3.2 เป้าหมายย่อย (Sub-goals) -->
+        <SubGoals>
+            <Goal sequence="1">
+                [เช่น: "วิเคราะห์ความหมายของแต่ละตัวอักษร (C-O-S-T-A-R-G)"]
+            </Goal>
+            <Goal sequence="2">
+                [เช่น: "ระบุวิธีนำแต่ละส่วนไปประยุกต์ใช้ในการเขียน Prompt"]
+            </Goal>
+            <Goal sequence="3">
+                [เช่น: "สร้างตัวอย่าง (Example) ที่ใช้ได้จริง"]
+            </Goal>
+        </SubGoals>
+
+        <!-- 3.3 ผลลัพธ์ที่คาดหวัง (Expected Outputs) -->
+        <ExpectedOutputs>
+            <Output type="primary">
+                [ประเภท: บทความ, โค้ด, รายงาน, คู่มือ, ฯลฯ]
+                [รูปแบบ: Markdown, XML, JSON, ฯลฯ]
+                [เช่น: "Markdown document พร้อมตัวอย่าง XML"]
+            </Output>
+            <Output type="secondary">
+                [เช่น: "ตัวอย่าง Prompt อยู่ 2-3 ตัวอย่าง"]
+            </Output>
+        </ExpectedOutputs>
+
+        <!-- 3.4 Success Criteria (เกณฑ์ความสำเร็จ) -->
+        <SuccessCriteria>
+            <Criterion priority="critical">
+                [เกณฑ์สำคัญที่สุด เช่น: "ต้องถูกต้อง 100% ตามไฟล์ต้นทาง"]
+            </Criterion>
+            <Criterion priority="high">
+                [เช่น: "ใช้ภาษาไทยกระชับแต่เข้าใจง่าย"]
+            </Criterion>
+            <Criterion priority="medium">
+                [เช่น: "มีตัวอย่าง XML Code Block"]
+            </Criterion>
+        </SuccessCriteria>
+    </Objective>
+
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <!-- 4. STATE (S) - สถานะปัจจุบัน ข้อมูลนำเข้า Input -->
+    <!-- ═════════════════════════════════════════════════════════════════════ -->
+    <State>
+        <!-- 4.1 ข้อมูลนำเข้า (Input Data) -->
+        <InputData>
+            <DataSource type="primary">
+                [ที่มาของข้อมูล เช่น: "GitHub Repository: imron-Gkt/CO-STA-RG"]
+                [รูปแบบ: URL / Raw Content / File Upload / Direct Text]
+            </DataSource>
+            <DataSource type="secondary">
+                [เช่น: "BDL Apex Prime Documentation"]
+            </DataSource>
+            <DataFormat>[เช่น: "Markdown, JSON, XML"]</DataFormat>
+            <DataVolume>[ขนาด เช่น: "< 50KB"]</DataVolume>
+            </InputData>
+
+            <!-- 4.2 สถานะปัจจุบัน (Current State / Known Information) -->
+            <CurrentKnowledge>
+                <KnownFact>
+                    [ข้อเท็จจริงที่รู้แล้ว เช่น: "CO-STA-RG คือ prompt framework"]
+                </KnownFact>
+                <KnownFact>
+                    [เช่น: "ต้องเป็นไปตาม GKT-thai standards"]
+                </KnownFact>
+            </CurrentKnowledge>
+
+            <!-- 4.3 ความไม่แน่นอน (Uncertainties / Gaps) -->
+            <UnknownFactors>
+                <Unknown severity="high">
+                    [สิ่งที่ยังไม่ชัดเจน เช่น: "ความหมายที่ชัดเจนของแต่ละตัวอักษร"]
+                </Unknown>
+                <Unknown severity="medium">
+                    [เช่น: "ความต่างจาก CO-STAR-G"]
+                </Unknown>
+            </UnknownFactors>
+
+            <!-- 4.4 ข้อสมมติ (Assumptions) -->
+            <Assumptions>
+                <Assumption confidence="high">
+                    [สิ่งที่สมมติว่าเป็นจริง เช่น: "ผู้ใช้เข้าใจ XML พื้นฐาน"]
+                </Assumption>
+                <Assumption confidence="medium">
+                    [เช่น: "มีความรู้พื้นฐาน prompt engineering"]
+                </Assumption>
+            </Assumptions>
+        </State>
+
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <!-- 5. TASK (T) - งานที่ AI ต้องทำ กระบวนการ -->
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <Task>
+            <!-- 5.1 ขั้นตอนหลัก (Main Process Steps) -->
+            <ProcessSteps>
+                <Step sequence="1" name="[ชื่อขั้นตอน]">
+                    <Description>
+                        [คำอธิบายรายละเอียด สิ่งที่ต้องทำในขั้นตอนนี้]
+                    </Description>
+                    <InputRequired>
+                        [ข้อมูลหรืออินพุตที่ต้องใช้ในขั้นตอนนี้]
+                    </InputRequired>
+                    <OutputExpected>
+                        [ผลลัพธ์ที่คาดหวังจากขั้นตอนนี้]
+                    </OutputExpected>
+                    <TimeEstimate>[เวลาประมาณ เช่น: "5 นาที"]</TimeEstimate>
+                </Step>
+
+                <Step sequence="2" name="[ชื่อขั้นตอน]">
+                    <!-- เหมือนด้านบน -->
+                </Step>
+
+                <Step sequence="3" name="[ชื่อขั้นตอน]">
+                    <!-- เหมือนด้านบน -->
+                </Step>
+            </ProcessSteps>
+
+            <!-- 5.2 วิธีการทำงาน (Methodology) -->
+            <Methodology>
+                <Approach>[วิธีการที่ใช้ เช่น: "Structural Analysis"]</Approach>
+                <Framework>[Framework ที่อ้างอิง เช่น: "BDL Apex Prime"]</Framework>
+                <Tools>[เครื่องมือที่ใช้ เช่น: "Markdown, XML"]</Tools>
+            </Methodology>
+
+            <!-- 5.3 เงื่อนไขและการตัดสินใจ (Decision Points) -->
+            <DecisionPoints>
+                <Decision condition="[เงื่อนไข]">
+                    <IfTrue>[ถ้าเป็นจริง ให้ทำ...]</IfTrue>
+                    <IfFalse>[ถ้าเป็นเท็จ ให้ทำ...]</IfFalse>
+                </Decision>
+            </DecisionPoints>
+
+            <!-- 5.4 Quality Checks (ตรวจสอบคุณภาพ) -->
+            <QualityCheckpoints>
+                <Checkpoint sequence="1">
+                    [เช่น: "ตรวจสอบความถูกต้องของข้อมูลจากต้นทาง"]
+                </Checkpoint>
+                <Checkpoint sequence="2">
+                    [เช่น: "ตรวจสอบภาษาไทยและเทคนิก"]
+                </Checkpoint>
+            </QualityCheckpoints>
+        </Task>
+
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <!-- 6. ACTION (A) - การดำเนินการ สิ่งที่ AI ต้องสร้าง/ออกมา -->
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <Action>
+            <!-- 6.1 การดำเนินการหลัก (Primary Actions) -->
+            <PrimaryActions>
+                <Action type="analysis">
+                    [เช่น: "วิเคราะห์โครงสร้าง CO-STA-RG จาก input"]
+                </Action>
+                <Action type="synthesis">
+                    [เช่น: "รวมข้อมูลเป็นคู่มือเป็นขั้นเป็นตอน"]
+                </Action>
+                <Action type="creation">
+                    [เช่น: "สร้างตัวอย่าง XML Prompt"]
+                </Action>
+            </PrimaryActions>
+
+            <!-- 6.2 Output Specifications (การระบุรายละเอียดผลลัพธ์) -->
+            <OutputSpecifications>
+                <Format>[รูปแบบ เช่น: "Markdown with Code Blocks"]</Format>
+                <Structure>
+                    [โครงสร้าง เช่น: "# Heading, ## Subheading, - Bullet, ```xml```"]
+                </Structure>
+                <Language>[ภาษา เช่น: "ไทย (อังกฤษสำหรับเทคนิค)"]</Language>
+                <Length>[ความยาว เช่น: "1000-1500 words"]</Length>
+                <Tone>[ลีลา เช่น: "Professional, Clear, Actionable"]</Tone>
+                <Examples>[จำนวนตัวอย่าง เช่น: "3-5 examples"]</Examples>
+            </OutputSpecifications>
+
+            <!-- 6.3 Transformation Rules (กฎการแปลง/จัดการข้อมูล) -->
+            <TransformationRules>
+                <Rule priority="critical">
+                    [เช่น: "ต้องอ้างอิงจากไฟล์ต้นทางเท่านั้น ห้ามคาดเดา"]
+                </Rule>
+                <Rule priority="high">
+                    [เช่น: "ใช้ตัวอักษรพิมพ์ใหญ่สำหรับ CO-STA-RG"]
+                </Rule>
+                <Rule priority="high">
+                    [เช่น: "เชื่อมโยงแต่ละส่วนกับ BDL Apex Prime"]
+                </Rule>
+            </TransformationRules>
+
+            <!-- 6.4 Fallback / Error Handling -->
+            <ErrorHandling>
+                <Error condition="[เช่น: GitHub URL ไม่สามารถเข้าถึง]">
+                    <Action>[เช่น: "ขอ Raw Content จากผู้ใช้"]</Action>
+                </Error>
+                <Error condition="[เช่น: ข้อมูลไม่สมบูรณ์]">
+                    <Action>[เช่น: "ถามผู้ใช้ให้ชี้แจงเพิ่มเติม"]</Action>
+                </Error>
+            </ErrorHandling>
+        </Action>
+
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <!-- 7. RESULT (R) - ผลลัพธ์ที่คาดหวัง สิ่งที่ต้องส่งมอบ -->
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <Result>
+            <!-- 7.1 Deliverables (สิ่งที่ต้องส่งมอบ) -->
+            <Deliverables>
+                <Deliverable id="D1" type="document">
+                    <Name>[เช่น: "CO-STA-RG Implementation Guide"]</Name>
+                    <Format>[เช่น: "Markdown"]</Format>
+                    <Content>
+                        [รายละเอียด เช่น: "คู่มือการใช้ 7 หัวข้อหลัก พร้อมตัวอย่าง"]
+                    </Content>
+                </Deliverable>
+
+                <Deliverable id="D2" type="code">
+                    <Name>[เช่น: "CO-STA-RG Prompt Template"]</Name>
+                    <Format>[เช่น: "XML"]</Format>
+                    <Content>
+                        [รายละเอียด เช่น: "Template ที่สามารถ copy-paste ใช้ได้"]
+                    </Content>
+                </Deliverable>
+            </Deliverables>
+
+            <!-- 7.2 Validation Checklist (รายการตรวจสอบความถูกต้อง) -->
+            <ValidationChecklist>
+                <Item>
+                    ☐ [เช่น: "ทุกข้อมูลอ้างอิงจากต้นทาง (README + Source Code)"]
+                </Item>
+                <Item>
+                    ☐ [เช่น: "ไม่มีการคาดเดาหรือสัมมติเพิ่มเติม"]
+                </Item>
+                <Item>
+                    ☐ [เช่น: "ภาษาไทยถูกต้อง ใช้อักษรสามารถหา Google เจอ"]
+                </Item>
+                <Item>
+                    ☐ [เช่น: "มีตัวอย่าง XML Code Block อยู่"]
+                </Item>
+            </ValidationChecklist>
+
+            <!-- 7.3 Success Metrics (วัดความสำเร็จ) -->
+            <SuccessMetrics>
+                <Metric type="accuracy">
+                    [เช่น: "Accuracy 100% vs. source documents"]
+                </Metric>
+                <Metric type="usability">
+                    [เช่น: "ผู้ใช้ GKT-thai team สามารถนำไปใช้ได้เลย"]
+                </Metric>
+                <Metric type="completeness">
+                    [เช่น: "ครอบคลุมทุกด้านของ CO-STA-RG"]
+                </Metric>
+            </SuccessMetrics>
+        </Result>
+
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <!-- 8. GROUND (G) - การยึดเหน่ือว ข้อมูลอ้างอิง ความเป็นจริง -->
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <Ground>
+            <!-- 8.1 ข้อมูลอ้างอิง (References & Sources) -->
+            <References>
+                <Reference id="R1" type="primary">
+                    <Title>[เช่น: "CO-STA-RG GitHub Repository"]</Title>
+                    <URL>[เช่น: "https://github.com/imron-Gkt/CO-STA-RG"]</URL>
+                    <AccessedDate>[วันที่เข้าถึง]</AccessedDate>
+                    <Relevance>[ความเกี่ยวข้อง เช่น: "Critical - Core Framework"]</Relevance>
+                </Reference>
+
+                <Reference id="R2" type="secondary">
+                    <Title>[เช่น: "BDL Apex Prime Documentation"]</Title>
+                    <URL>[หรือ Path]</URL>
+                    <Relevance>[เช่น: "High - Related Framework"]</Relevance>
+                </Reference>
+            </References>
+
+            <!-- 8.2 ข้อมูลความเป็นจริง (Factual Grounding) -->
+            <FactualGrounding>
+                <Fact id="F1" confidence="100%">
+                    [เช่น: "C = Context; O = Objective; ... (ตามเอกสารต้นทาง)"]
+                    <Source>R1 - README.md line XX</Source>
+                </Fact>
+
+                <Fact id="F2" confidence="95%">
+                    [เช่น: "CO-STA-RG ต่างจาก CO-STAR-G เพราะ..."]
+                    <Source>R1 - Documentation Section 3</Source>
+                </Fact>
+            </FactualGrounding>
+
+            <!-- 8.3 Limitations & Disclaimers (ข้อจำกัด) -->
+            <Limitations>
+                <Limitation severity="high">
+                    [เช่น: "วิเคราะห์ได้เฉพาะข้อมูลที่ได้รับเท่านั้น"]
+                </Limitation>
+                <Limitation severity="medium">
+                    [เช่น: "ไม่รวมความรู้จากเอกสารภายนอก"]
+                </Limitation>
+            </Limitations>
+
+            <!-- 8.4 Version Control & Traceability (ติดตามเวอร์ชัน) -->
+            <Traceability>
+                <SourceVersion>[เช่น: "CO-STA-RG v2.1 (as of 2024-01)"]</SourceVersion>
+                <PromptVersion>[เช่น: "CO-STA-RG Template v1.0"]</PromptVersion>
+                <ChangeLog>
+                    <Change version="1.0" date="2024-04-12">
+                        [Initial version created]
+                    </Change>
+                </ChangeLog>
+            </Traceability>
+
+            <!-- 8.5 Context Updates (ข้อมูลที่อาจเปลี่ยน) -->
+            <ContextDependencies>
+                <Dependency>
+                    [เช่น: "ถ้า CO-STA-RG เปลี่ยนเวอร์ชัน ต้องอัปเดต prompt"]
+                </Dependency>
+                <Dependency>
+                    [เช่น: "ถ้า GKT-thai standards มีการแก้ไข"]
+                </Dependency>
+            </ContextDependencies>
+        </Ground>
+
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <!-- BONUS: USAGE EXAMPLES (ตัวอย่างการใช้งาน) -->
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <UsageExamples>
+            <Example id="EX1" title="[ตัวอย่างที่ 1]">
+                <Scenario>
+                    [สถานการณ์ เช่น: "ต้องเขียน Prompt สำหรับวิเคราะห์ข้อมูล"]
+                </Scenario>
+                <Implementation>
+                    [วิธีการ step-by-step ว่าใช้ template นี้อย่างไร]
+                </Implementation>
+                <Result>
+                    [ผลลัพธ์ที่ได้]
+                </Result>
+            </Example>
+
+            <Example id="EX2" title="[ตัวอย่างที่ 2]">
+                <!-- เหมือนด้านบน -->
+            </Example>
+        </UsageExamples>
+
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <!-- APPENDIX: QUICK REFERENCE (อ้างอิงสั้นๆ) -->
+        <!-- ═════════════════════════════════════════════════════════════════════ -->
+        <QuickReference>
+            <CO_STA_RG_Definition>
+                <C>Context - บริบท ฉากหลัง สถานการณ์</C>
+                <O>Objective - เป้าหมาย สิ่งที่ต้องการให้ AI ทำ</O>
+                <S>State - สถานะปัจจุบัน ข้อมูลนำเข้า</S>
+                <T>Task - งาน กระบวนการ ขั้นตอน</T>
+                <A>Action - การดำเนินการ สิ่งที่ AI ต้องสร้าง</A>
+                <R>Result - ผลลัพธ์ สิ่งที่ต้องส่งมอบ</R>
+                <G>Ground - การยึดเหน่ือว ข้อมูลอ้างอิง</G>
+            </CO_STA_RG_Definition>
+
+            <FillingTips>
+                <Tip>1. เริ่มจาก C (Context) เสมอ เพื่อให้เข้าใจปัญหา</Tip>
+                <Tip>2. O (Objective) ต้องชัดเจนและวัดได้</Tip>
+                <Tip>3. S (State) ระบุข้อมูลที่มี สิ่งที่รู้ และสิ่งที่ไม่รู้</Tip>
+                <Tip>4. T (Task) ต้องมี step-by-step และ quality checks</Tip>
+                <Tip>5. A (Action) ระบุรายละเอียด output ให้ชัดเจน</Tip>
+                <Tip>6. R (Result) ต้องมี validation checklist</Tip>
+                <Tip>7. G (Ground) ระบุแหล่งข้อมูลและตรวจสอบความเป็นจริง</Tip>
+            </FillingTips>
+        </QuickReference>
+
+    </PromptTemplate>
+
+    <!--
+    ═════════════════════════════════════════════════════════════════════════════
+      หมายเหตุ: Template นี้ใช้ได้กับ Prompt ทุกประเภท
+      - วิเคราะห์ข้อมูล
+      - สร้างเนื้อหา
+      - ตัดสินใจ
+      - การแปลง/การจัดการ
+      - การแก้ปัญหา
+      - ฯลฯ
+
+      ให้เลือกเฉพาะส่วนที่เกี่ยวข้องกับ Prompt ของคุณ
+    ═════════════════════════════════════════════════════════════════════════════
+    -->
